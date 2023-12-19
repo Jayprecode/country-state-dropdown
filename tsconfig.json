@@ -1,27 +1,64 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "compilerOptions": {
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "strict": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+        "noFallthroughCasesInSwitch": true,
+
+        "target": "es2017",
+        "outDir": "out",
+        "declaration": true,
+        "sourceMap": true,
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "checkJs": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "jsx": "preserve",
+        "noEmit": true,
+        "isolatedModules": true,
+        "incremental": true,
+
+        "baseUrl": ".",
+        "allowUnusedLabels": false,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    },
+    "include": [
+        "next-env.d.ts",
+        "next.config.js",
+        "**/*.ts",
+        "**/*.tsx",
+        ".eslintrc.cjs",
+        ".next/types/**/*.ts",
+        "postcss.config.js",
+        "tailwind.config.ts",
+        "lint-staged.config.ts",
+        "app/(root)/quests/edit/layout"
     ],
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+    "exclude": ["node_modules", "dirty"]
 }

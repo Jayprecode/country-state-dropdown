@@ -1,20 +1,23 @@
 /* -------------------------------------------------------------------------- */
 /*                             External Dependency                            */
 /* -------------------------------------------------------------------------- */
+
 import React from "react";
 
 /* -------------------------------------------------------------------------- */
 /*                             Internal Dependency                            */
 /* -------------------------------------------------------------------------- */
 
-import CountryState from "@/widgets/country-state";
+import CountryDropdown from "@/components/dropdown/countries";
+import StateDropdown from "@/components/dropdown/states";
 
-const Home = () => {
+const CountryState = () => {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center p-24">
-            <CountryState />
-        </main>
+        <div className="flex w-[1000px] items-center justify-center gap-4">
+            <CountryDropdown />
+            <StateDropdown />
+        </div>
     );
 };
 
-export default Home;
+export default CountryState;
